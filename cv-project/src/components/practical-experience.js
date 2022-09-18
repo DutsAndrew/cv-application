@@ -9,7 +9,17 @@ class PracticalExperience extends Component {
   render() {
     return (
       <div id="practical-experience">
-        <p>PracticalExperience</p>
+        <p>Most Recent Work:</p>
+        <label className='practical-exp'>Company Name:</label>
+        <input type='text' className='practical-exp'></input>
+        <label className='practical-exp'>Position Name:</label>
+        <input type='text' className='practical-exp'></input>
+        <label className='practical-exp'>Main Tasks of Role:</label>
+        <textarea type='text-area' className='practical-exp' rows="5" cols="100"></textarea>
+        <label className='practical-exp'>Start Employment:</label>
+        <input type='date' className='practical-exp'></input>
+        <label className='practical-exp'>End Employment:</label>
+        <input type='date' className='practical-exp'></input>
       </div>
     )
   }
