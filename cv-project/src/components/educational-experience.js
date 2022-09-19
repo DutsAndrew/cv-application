@@ -7,17 +7,19 @@ class EducationalExperience extends Component {
   }
 
   render() {
+    const { educationalExperience, handleChange } = this.props;
+
     return (
       <div id='educational-experience'>
         <p>Educational Experience:</p>
         <label className='educational-exp'>School Name:</label>
-        <input type='text' className='educational-exp'></input>
+        <input type='text' id="school-input" className='educational-exp' onChange={handleChange} ></input>
         <label className='educational-exp'>Degree Name:</label>
-        <input type='text' className='educational-exp'></input>
+        <input type='text' id="degree-input" className='educational-exp' onChange={handleChange} ></input>
         <label className='educational-exp'>Start of Studies:</label>
-        <input type='date' className='educational-exp'></input>
+        <input type='date' id="start-studies-input" className='educational-exp' onChange={handleChange} ></input>
         <label className='educational-exp'>End of Studies:</label>
-        <input type='date' className='educational-exp'></input>
+        <input type='date' id="end-studies-input" className='educational-exp' onChange={handleChange} ></input>
       </div>
     )
   }

@@ -7,18 +7,17 @@ class GeneralInfo extends Component {
   }
 
   render() {
-    const { generalInfo } = this.props;
-    console.log(generalInfo);
+    const { generalInfo, handleChange } = this.props;
 
     return (
       <div id="general-information">
         <p>General Information:</p>
         <label className='general-info-name'>Name:</label>
-        <input className='general-info' type="text"></input>
+        <input id="name-input" className='general-info' type="text" onChange={handleChange} ></input>
         <label className='general-info-email'>Email:</label>
-        <input className='general-info' type="email"></input>
+        <input id="email-input" className='general-info' type="email" onChange={handleChange} ></input>
         <label className='general-info-phone'>Phone Number:</label>
-        <input className='general-info' type="number"></input>
+        <input id="phone-input" className='general-info' type="number" onChange={handleChange} ></input>
       </div>
     )
   }

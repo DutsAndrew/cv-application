@@ -13,24 +13,139 @@ class App extends Component {
         email: '',
         phoneNumber: null,
       },
-      EducationalExperience: {
+      educationalExperience: {
         schoolName: '',
         degree: '',
         startDate: null,
         endDate: null,
       },
-      PracticalExperience: {
+      practicalExperience: {
         companyName: '',
         positionTitle: '',
-        JobRole: '',
-        hireDate: '',
-        endEmployment: '',
-      }
+        mainTasks: '',
+        startDate: '',
+        endDate: '',
+      },
+      currentPage: 1,
     }
   }
 
-  handleChange = (e) => {
-    console.log(e);
+  handleGeneralInfoChange = (e) => {
+    if (e.target.id === 'name-input') {
+      this.setState({
+        generalInfo: {
+          name: e.target.value,
+        }
+      });
+      console.log(this.state.generalInfo.name);
+      return;
+    }
+
+    if (e.target.id === 'email-input') {
+      this.setState({
+        generalInfo: {
+          email: e.target.value,
+        }
+      });
+      console.log(this.state.generalInfo.email);
+      return;
+    }
+
+    if (e.target.id === 'phone-input') {
+      this.setState({
+        generalInfo: {
+          phoneNumber: e.target.value,
+        }
+      });
+      console.log(this.state.generalInfo.phoneNumber);
+      return;
+    }
+  }
+
+  handleEducationChange = (e) => {
+    if (e.target.id === 'school-input') {
+      this.setState({
+        educationalExperience: {
+          schoolName: e.target.value,
+        }
+      });
+      return;
+    }
+
+    if (e.target.id === 'degree-input') {
+      this.setState({
+        educationalExperience: {
+          degree: e.target.value,
+        }
+      });
+      return;
+    }
+
+    if (e.target.id === 'start-studies-input') {
+      this.setState({
+        educationalExperience: {
+          startDate: e.target.value,
+        }
+      });
+      return;
+    }
+
+    if (e.target.id === 'end-studies-input') {
+      this.setState({
+        educationalExperience: {
+          endDate: e.target.value,
+        }
+      });
+      return;
+    }
+  }
+
+  handlePracticalExperienceChange = (e) => {
+    console.log(e.target.id);
+    if (e.target.id === 'company-input') {
+      this.setState({
+        practicalExperience: {
+          companyName: e.target.value,
+        }
+      });
+      return;
+    }
+
+    if (e.target.id === 'position-input') {
+      this.setState({
+        practicalExperience: {
+          positionTitle: e.target.value,
+        }
+      });
+      return
+    }
+
+    if (e.target.id === 'main-tasks-input') {
+      this.setState({
+        practicalExperience: {
+          mainTasks: e.target.value,
+        }
+      });
+      return;
+    }
+
+    if (e.target.id === 'start-employment-input') {
+      this.setState({
+        practicalExperience: {
+          startDate: e.target.value,
+        }
+      });
+      return;
+    }
+
+    if (e.target.id === 'end-employment-input') {
+      this.setState({
+        practicalExperience: {
+          endDate: e.target.value,
+        }
+      });
+      return;
+    }
   }
 
   onSubmit = (e) => {
@@ -45,9 +160,9 @@ class App extends Component {
       <div>
         <div id="header">Hello World!</div>
         <form id="cv">
-          <GeneralInfo generalInfo={generalInfo} />
-          <EducationalExperience educationalExperience={educationalExperience} />
-          <PracticalExperience practicalExperience={practicalExperience} />
+          <GeneralInfo generalInfo={generalInfo} handleChange={this.handleGeneralInfoChange} />
+          <EducationalExperience educationalExperience={educationalExperience} handleChange={this.handleEducationChange} />
+          <PracticalExperience practicalExperience={practicalExperience} handleChange={this.handlePracticalExperienceChange} />
           <button id="submit-button" type="submit" onClick={this.onSubmit} >Submit Application</button>
         </form>
       </div>
