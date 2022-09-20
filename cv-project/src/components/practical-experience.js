@@ -11,8 +11,8 @@ class PracticalExperience extends Component {
 
     return (
       <div id="practical-experience">
-        <p>Most Recent Work:</p>
-        <form id="cv">
+        <p id="experience-header">Most Recent Work:</p>
+        <form id="cv-experience">
           <label className='practical-exp'>Company Name:</label>
           <input type='text' id="company-input" className='practical-exp' onChange={handleChange} ></input>
           <label className='practical-exp'>Position Name:</label>

@@ -11,8 +11,8 @@ class EducationalExperience extends Component {
 
     return (
       <div id='educational-experience'>
-        <p>Educational Experience:</p>
-        <form id="cv">
+        <p id="education-header">Educational Experience:</p>
+        <form id="cv-education">
           <label className='educational-exp'>School Name:</label>
           <input type='text' id="school-input" className='educational-exp' onChange={handleChange} ></input>
           <label className='educational-exp'>Degree Name:</label>

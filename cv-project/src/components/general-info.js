@@ -11,8 +11,8 @@ class GeneralInfo extends Component {
 
     return (
       <div id="general-information">
-        <p>General Information:</p>
-        <form id="cv">
+        <p id="general-header">General Information:</p>
+        <form id="cv-general">
           <label className='general-info-name'>Name:</label>
           <input id="name-input" className='general-info' type="text" onChange={handleChange} ></input>
           <label className='general-info-email'>Email:</label>
