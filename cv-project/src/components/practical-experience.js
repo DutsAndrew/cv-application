@@ -12,18 +12,21 @@ class PracticalExperience extends Component {
     return (
       <div id="practical-experience">
         <p>Most Recent Work:</p>
-        <label className='practical-exp'>Company Name:</label>
-        <input type='text' id="company-input" className='practical-exp' onChange={handleChange} ></input>
-        <label className='practical-exp'>Position Name:</label>
-        <input type='text' id="position-input" className='practical-exp' onChange={handleChange} ></input>
-        <label className='practical-exp'>Main Tasks of Role:</label>
-        <textarea type='text-area' id="main-tasks-input" className='practical-exp' rows="5" cols="100" onChange={handleChange} ></textarea>
-        <label className='practical-exp'>Start Employment:</label>
-        <input type='date' id="start-employment-input" className='practical-exp' onChange={handleChange} ></input>
-        <label className='practical-exp'>End Employment:</label>
-        <input type='date' id="end-employment-input" className='practical-exp' onChange={handleChange} ></input>
+        <form id="cv">
+          <label className='practical-exp'>Company Name:</label>
+          <input type='text' id="company-input" className='practical-exp' onChange={handleChange} ></input>
+          <label className='practical-exp'>Position Name:</label>
+          <input type='text' id="position-input" className='practical-exp' onChange={handleChange} ></input>
+          <label className='practical-exp'>Main Tasks of Role:</label>
+          <textarea type='text-area' id="main-tasks-input" className='practical-exp' rows="5" cols="100" onChange={handleChange} ></textarea>
+          <label className='practical-exp'>Start Employment:</label>
+          <input type='date' id="start-employment-input" className='practical-exp' onChange={handleChange} ></input>
+          <label className='practical-exp'>End Employment:</label>
+          <input type='date' id="end-employment-input" className='practical-exp' onChange={handleChange} ></input>
+        </form>
+        <button id="submit-button" type="submit" onClick={this.onSubmit} >Submit Application</button>
       </div>
-    )
+    );
   }
 }
 

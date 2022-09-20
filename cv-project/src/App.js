@@ -148,25 +148,48 @@ class App extends Component {
     }
   }
 
+  turnThePage = (e) => {
+    console.log(e);
+  }
+
   onSubmit = (e) => {
     e.preventDefault();
     console.log(e);
   }
 
   render() {
-    const { generalInfo, educationalExperience, practicalExperience } = this.state;
+    const { generalInfo, educationalExperience, practicalExperience, currentPage } = this.state;
 
-    return (
-      <div>
-        <div id="header">Hello World!</div>
-        <form id="cv">
-          <GeneralInfo generalInfo={generalInfo} handleChange={this.handleGeneralInfoChange} />
-          <EducationalExperience educationalExperience={educationalExperience} handleChange={this.handleEducationChange} />
-          <PracticalExperience practicalExperience={practicalExperience} handleChange={this.handlePracticalExperienceChange} />
-          <button id="submit-button" type="submit" onClick={this.onSubmit} >Submit Application</button>
-        </form>
-      </div>
-    );
+    if (currentPage === 1) {
+      return (
+        <GeneralInfo
+          generalInfo={generalInfo}
+          handleChange={this.handleGeneralInfoChange} 
+          turnPage={this.turnThePage}
+        />
+      );
+    }
+
+    if (currentPage === 2) {
+      return (
+        <EducationalExperience
+          educationalExperience={educationalExperience}
+          handleChange={this.handleEducationChange}
+          turnPage={this.turnThePage}
+        />
+      );
+    }
+
+    if (currentPage === 3) {
+      return (
+        <PracticalExperience
+          practicalExperience={practicalExperience}
+          handleChange={this.handlePracticalExperienceChange}
+          onSubmit={this.onSubmit}
+        />
+      );
+    }
+    
   }
 }
 
