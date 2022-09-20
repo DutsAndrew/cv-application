@@ -148,8 +148,40 @@ class App extends Component {
     }
   }
 
-  turnThePage = (e) => {
-    console.log(e);
+  previousPage = (e) => {
+    const currentPage = this.state.currentPage;
+
+    if (currentPage === 3) {
+      this.setState({
+        currentPage: 2,
+      });
+      return;
+    }
+
+    if (currentPage === 2) {
+      this.setState({
+        currentPage: 1,
+      });
+      return;
+    }
+  }
+
+  nextPage = (e) => {
+    const currentPage = this.state.currentPage;
+
+    if (currentPage === 1) {
+      this.setState({
+        currentPage: 2,
+      });
+      return;
+    }
+
+    if (currentPage === 2) {
+      this.setState({
+        currentPage: 3,
+      })
+      return;
+    }
   }
 
   onSubmit = (e) => {
@@ -164,8 +196,8 @@ class App extends Component {
       return (
         <GeneralInfo
           generalInfo={generalInfo}
-          handleChange={this.handleGeneralInfoChange} 
-          turnPage={this.turnThePage}
+          handleChange={this.handleGeneralInfoChange}
+          nextPage={this.nextPage}
         />
       );
     }
@@ -175,7 +207,8 @@ class App extends Component {
         <EducationalExperience
           educationalExperience={educationalExperience}
           handleChange={this.handleEducationChange}
-          turnPage={this.turnThePage}
+          previousPage={this.previousPage}
+          nextPage={this.nextPage}
         />
       );
     }
@@ -185,7 +218,8 @@ class App extends Component {
         <PracticalExperience
           practicalExperience={practicalExperience}
           handleChange={this.handlePracticalExperienceChange}
-          onSubmit={this.onSubmit}
+          previousPage={this.previousPage}
+          submitForm={this.onSubmit}
         />
       );
     }

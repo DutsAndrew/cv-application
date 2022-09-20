@@ -7,7 +7,7 @@ class GeneralInfo extends Component {
   }
 
   render() {
-    const { generalInfo, handleChange, turnPage } = this.props;
+    const { generalInfo, handleChange, previousPage, nextPage } = this.props;
 
     return (
       <div id="general-information">
@@ -20,9 +20,9 @@ class GeneralInfo extends Component {
           <label className='general-info-phone'>Phone Number:</label>
           <input id="phone-input" className='general-info' type="number" onChange={handleChange} ></input>
         </form>
-        <button id="next-button" type="submit" onClick={turnPage} >Next Page</button>
+        <button className="next-button" onClick={nextPage} >Next Page</button>
       </div>
-    )
+    );
   }
 }
 

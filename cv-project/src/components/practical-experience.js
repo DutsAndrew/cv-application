@@ -7,7 +7,7 @@ class PracticalExperience extends Component {
   }
 
   render() {
-    const { generalInfo, handleChange } = this.props;
+    const { generalInfo, handleChange, previousPage, submitForm } = this.props;
 
     return (
       <div id="practical-experience">
@@ -24,7 +24,8 @@ class PracticalExperience extends Component {
           <label className='practical-exp'>End Employment:</label>
           <input type='date' id="end-employment-input" className='practical-exp' onChange={handleChange} ></input>
         </form>
-        <button id="submit-button" type="submit" onClick={this.onSubmit} >Submit Application</button>
+        <button className="next-button" onClick={previousPage} >Previous Page</button>
+        <button id="submit-button" type="submit" onClick={submitForm} >Submit Application</button>
       </div>
     );
   }

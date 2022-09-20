@@ -7,7 +7,7 @@ class EducationalExperience extends Component {
   }
 
   render() {
-    const { educationalExperience, handleChange } = this.props;
+    const { educationalExperience, handleChange, previousPage, nextPage } = this.props;
 
     return (
       <div id='educational-experience'>
@@ -22,7 +22,8 @@ class EducationalExperience extends Component {
           <label className='educational-exp'>End of Studies:</label>
           <input type='date' id="end-studies-input" className='educational-exp' onChange={handleChange} ></input>
         </form>
-        <button id="next-button" type="submit" onClick={this.nextPage} >Next page</button>
+        <button className="next-button" onClick={previousPage} >Previous Page</button>
+        <button className="next-button" type="submit" onClick={nextPage} >Next page</button>
       </div>
     )
   }
