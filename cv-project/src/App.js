@@ -3,6 +3,7 @@ import './styles/App.css';
 import EducationalExperience from './components/educational-experience';
 import GeneralInfo from './components/general-info';
 import PracticalExperience from './components/practical-experience';
+import ProgressBar from './components/progress-bar';
 
 class App extends Component {
   constructor() {
@@ -194,33 +195,42 @@ class App extends Component {
 
     if (currentPage === 1) {
       return (
-        <GeneralInfo
-          generalInfo={generalInfo}
-          handleChange={this.handleGeneralInfoChange}
-          nextPage={this.nextPage}
-        />
+        <div>
+          <ProgressBar currentPage={this.state.currentPage} />
+          <GeneralInfo
+            generalInfo={generalInfo}
+            handleChange={this.handleGeneralInfoChange}
+            nextPage={this.nextPage}
+          />
+        </div>
       );
     }
 
     if (currentPage === 2) {
       return (
-        <EducationalExperience
-          educationalExperience={educationalExperience}
-          handleChange={this.handleEducationChange}
-          previousPage={this.previousPage}
-          nextPage={this.nextPage}
-        />
+        <div>
+          <ProgressBar currentPage={this.state.currentPage} />
+          <EducationalExperience
+            educationalExperience={educationalExperience}
+            handleChange={this.handleEducationChange}
+            previousPage={this.previousPage}
+            nextPage={this.nextPage}
+          />
+        </div>
       );
     }
 
     if (currentPage === 3) {
       return (
-        <PracticalExperience
-          practicalExperience={practicalExperience}
-          handleChange={this.handlePracticalExperienceChange}
-          previousPage={this.previousPage}
-          submitForm={this.onSubmit}
-        />
+        <div>
+          <ProgressBar currentPage={this.state.currentPage} />
+          <PracticalExperience
+            practicalExperience={practicalExperience}
+            handleChange={this.handlePracticalExperienceChange}
+            previousPage={this.previousPage}
+            submitForm={this.onSubmit}
+          />
+        </div>
       );
     }
     

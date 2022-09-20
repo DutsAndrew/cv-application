@@ -1,0 +1,23 @@
+#progress-bar {
+  display: flex;
+  flex-flow: row-nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: black;
+  color: white;
+  height: 2.5vh;
+  margin: 0.25%;
+}
+
+.show-one-third {
+  width: 33vw;
+}
+
+.show-two-thirds {
+  width: 66vw;
+}
+
+.show-three-thirds {
+  width: 100vw;
+}
