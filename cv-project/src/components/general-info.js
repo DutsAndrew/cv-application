@@ -20,7 +20,7 @@ class GeneralInfo extends Component {
           <label className='general-info-phone'>Phone Number:</label>
           <input id="phone-input" className='general-info' type="number" onChange={handleChange} ></input>
         </form>
-        <button className="next-button" onClick={nextPage} >Next Page</button>
+        <button id="next-button" onClick={nextPage} >Next Page</button>
       </div>
     );
   }

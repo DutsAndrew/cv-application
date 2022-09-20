@@ -1,7 +1,76 @@
 #practical-experience {
   display: flex;
   flex-flow: column nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
   padding: 0.5%;
   gap: 0.75em;
+  width: 75vw;
+  height: 95vh;
+  margin: auto;
   background-color: green;
+}
+
+#experience-header {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  margin: 0;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 75vw;
+  height: 10vh;
+}
+
+#cv-experience {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 75vw;
+  height: 70vh;
+}
+
+.practical-label {
+  font-size: 1.5em;
+  font-style: italic;
+  margin-bottom: 1%;
+}
+
+#position-input, #company-input {
+  width: 40vw;
+  height: 3vh;
+  margin-bottom: 2%;
+  margin-top: 0.5%;
+  font-size: 1.25em;
+}
+
+#main-tasks-input {
+  height: 20%;
+  width: 70%;
+  margin-bottom: 1%;
+  font-size: 1.25em;
+}
+
+#start-employment-input, #end-employment-input {
+  width: 12vw;
+  height: 3vh;
+  margin-bottom: 3%;
+  margin-top: 0.5%;
+  font-size: 1.25em;
+}
+
+#previous-button {
+  width: 30vw;
+  height: 4vh;
+  font-size: 1.25em;
+}
+
+#submit-button {
+  width: 30vw;
+  height: 4vh;
+  font-size: 1.25em;
 }

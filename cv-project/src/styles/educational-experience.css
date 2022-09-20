@@ -1,7 +1,68 @@
 #educational-experience {
   display: flex;
   flex-flow: column nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
   padding: 0.5%;
   gap: 0.75em;
+  width: 75vw;
+  height: 80vh;
+  margin: auto;
   background-color: pink;
+}
+
+#education-header {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  margin: 0;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 75vw;
+  height: 10vh;
+}
+
+#cv-education {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 75vw;
+  height: 50vh;
+}
+
+.education-school, .education-degree, .education-start-studies, .education-end-studies {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+#degree-input, #school-input {
+  width: 40vw;
+  height: 2.5vh;
+  margin-bottom: 5%;
+  margin-top: 0.5%;
+  font-size: 1.25em;
+}
+
+#start-studies-input, #end-studies-input {
+  width: 12vw;
+  height: 2.5vh;
+  margin-bottom: 5%;
+  margin-top: 0.5%;
+  font-size: 1.25em;
+}
+
+#previous-button {
+  width: 30vw;
+  height: 4vh;
+  font-size: 1.25em;
+}
+
+#next-button {
+  width: 30vw;
+  height: 4vh;
+  font-size: 1.25em;
 }

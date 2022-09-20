@@ -7,7 +7,7 @@
   padding: 0.5%;
   gap: 0.75em;
   width: 75vw;
-  height: 60vh;
+  height: 70vh;
   margin: auto;
   background-color: cyan;
 }
@@ -34,20 +34,21 @@
   height: 40vh;
 }
 
-#name-input, #email-input, #phone-input {
-  width: 50vw;
-  height: 2.5vh;
-  margin-bottom: 5%;
-  margin-top: 2%;
-}
-
 .general-info-name, .general-info-email, .general-info-phone {
   font-size: 1.5em;
   font-style: italic;
 }
 
-.next-button {
+#name-input, #email-input, #phone-input {
+  width: 40vw;
+  height: 2.5vh;
+  margin-bottom: 5%;
+  margin-top: 0.5%;
+  font-size: 1.25em;
+}
+
+#next-button {
   width: 30vw;
-  height: 3.5vh;
+  height: 4vh;
   font-size: 1.25em;
 }
