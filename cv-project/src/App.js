@@ -4,6 +4,7 @@ import EducationalExperience from './components/educational-experience';
 import GeneralInfo from './components/general-info';
 import PracticalExperience from './components/practical-experience';
 import ProgressBar from './components/progress-bar';
+import Resume from './components/resume';
 
 class App extends Component {
   constructor() {
@@ -31,124 +32,6 @@ class App extends Component {
     }
   }
 
-  handleGeneralInfoChange = (e) => {
-    if (e.target.id === 'name-input') {
-      this.setState({
-        generalInfo: {
-          name: e.target.value,
-        }
-      });
-      console.log(this.state.generalInfo.name);
-      return;
-    }
-
-    if (e.target.id === 'email-input') {
-      this.setState({
-        generalInfo: {
-          email: e.target.value,
-        }
-      });
-      console.log(this.state.generalInfo.email);
-      return;
-    }
-
-    if (e.target.id === 'phone-input') {
-      this.setState({
-        generalInfo: {
-          phoneNumber: e.target.value,
-        }
-      });
-      console.log(this.state.generalInfo.phoneNumber);
-      return;
-    }
-  }
-
-  handleEducationChange = (e) => {
-    if (e.target.id === 'school-input') {
-      this.setState({
-        educationalExperience: {
-          schoolName: e.target.value,
-        }
-      });
-      return;
-    }
-
-    if (e.target.id === 'degree-input') {
-      this.setState({
-        educationalExperience: {
-          degree: e.target.value,
-        }
-      });
-      return;
-    }
-
-    if (e.target.id === 'start-studies-input') {
-      this.setState({
-        educationalExperience: {
-          startDate: e.target.value,
-        }
-      });
-      return;
-    }
-
-    if (e.target.id === 'end-studies-input') {
-      this.setState({
-        educationalExperience: {
-          endDate: e.target.value,
-        }
-      });
-      return;
-    }
-  }
-
-  handlePracticalExperienceChange = (e) => {
-    console.log(e.target.id);
-    if (e.target.id === 'company-input') {
-      this.setState({
-        practicalExperience: {
-          companyName: e.target.value,
-        }
-      });
-      return;
-    }
-
-    if (e.target.id === 'position-input') {
-      this.setState({
-        practicalExperience: {
-          positionTitle: e.target.value,
-        }
-      });
-      return
-    }
-
-    if (e.target.id === 'main-tasks-input') {
-      this.setState({
-        practicalExperience: {
-          mainTasks: e.target.value,
-        }
-      });
-      return;
-    }
-
-    if (e.target.id === 'start-employment-input') {
-      this.setState({
-        practicalExperience: {
-          startDate: e.target.value,
-        }
-      });
-      return;
-    }
-
-    if (e.target.id === 'end-employment-input') {
-      this.setState({
-        practicalExperience: {
-          endDate: e.target.value,
-        }
-      });
-      return;
-    }
-  }
-
   previousPage = (e) => {
     const currentPage = this.state.currentPage;
 
@@ -171,23 +54,58 @@ class App extends Component {
     const currentPage = this.state.currentPage;
 
     if (currentPage === 1) {
+      const inputName = document.getElementById('name-input').value;
+      const inputEmail = document.getElementById('email-input').value;
+      const inputPhone = document.getElementById('phone-input').value;
+
       this.setState({
         currentPage: 2,
+        generalInfo: {
+          name: inputName,
+          email: inputEmail,
+          phoneNumber: inputPhone,
+        }
       });
       return;
     }
 
     if (currentPage === 2) {
+      const schoolInput = document.getElementById('school-input').value;
+      const degreeInput = document.getElementById('degree-input').value;
+      const startDateInput = document.getElementById('start-studies-input').value;
+      const endDateInput = document.getElementById('end-studies-input').value;
+
       this.setState({
         currentPage: 3,
+        educationalExperience: {
+          schoolName: schoolInput,
+          degree: degreeInput,
+          startDate: startDateInput,
+          endDate: endDateInput,
+        }
       })
       return;
     }
-  }
 
-  onSubmit = (e) => {
-    e.preventDefault();
-    console.log(e);
+    if (currentPage === 3) {
+      const companyInput = document.getElementById('company-input').value;
+      const positionInput = document.getElementById('position-input').value;
+      const mainTasksInput = document.getElementById('main-tasks-input').value;
+      const startDateInput = document.getElementById('start-employment-input').value;
+      const endDateInput = document.getElementById('end-employment-input').value;
+
+      this.setState({
+        currentPage: 4,
+        practicalExperience: {
+          companyName: companyInput,
+          positionTitle: positionInput,
+          mainTasks: mainTasksInput,
+          startDate: startDateInput,
+          endDate: endDateInput,
+        }
+      })
+      return;
+    }
   }
 
   render() {
@@ -228,12 +146,24 @@ class App extends Component {
             practicalExperience={practicalExperience}
             handleChange={this.handlePracticalExperienceChange}
             previousPage={this.previousPage}
-            submitForm={this.onSubmit}
+            nextPage={this.nextPage}
           />
         </div>
       );
     }
     
+    if (currentPage === 4) {
+      return (
+        <div>
+          <Resume 
+            generalInfo={generalInfo}
+            educationalExperience={educationalExperience}
+            practicalExperience={practicalExperience}
+            previousPage={this.previousPage}
+          />
+        </div>
+      )
+    }
   }
 }
 
