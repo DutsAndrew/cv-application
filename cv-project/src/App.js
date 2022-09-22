@@ -35,6 +35,13 @@ class App extends Component {
   previousPage = (e) => {
     const currentPage = this.state.currentPage;
 
+    if (currentPage === 4) {
+      this.setState({
+        currentPage: 3,
+      });
+      return;
+    }
+
     if (currentPage === 3) {
       this.setState({
         currentPage: 2,

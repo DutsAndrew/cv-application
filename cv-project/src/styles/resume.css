@@ -1,0 +1,32 @@
+#resume {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: auto;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: brown;
+  color: white;
+  width: 60vw;
+  height: 100vh;
+}
+
+#general-header, #education-header, #experience-header {
+  width: 60vw;
+  height: 10vh;
+  font-size: 3em;
+}
+
+.resume-item {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  font-weight: bold;
+  color: yellow;
+}
+
+#previous-button {
+  width: 15vw;
+  height: 4vh;
+}
