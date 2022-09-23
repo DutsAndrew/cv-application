@@ -4,8 +4,8 @@
   margin: auto;
   justify-content: flex-start;
   align-items: center;
-  background-color: brown;
-  color: white;
+  background-color: #E7CFCD;
+  color: #9F9AA4;
   width: 100vw;
   height: 100vh;
 }
@@ -39,7 +39,8 @@
   font-weight: bold;
   margin: 0;
   padding: 1.5%;
-  color: yellow;
+  color: #CAB1BD;
+  font-weight: bolder;
 }
 
 #button-resume-container {
@@ -53,6 +54,10 @@
 #previous-button, #final-submit-button {
   width: 25vw;
   height: 4vh;
+  font-size: 1.25em;
+  font-weight: bolder;
+  background-color: #CAB1BD;
+  color: #9F9AA4;
 }
 
 #final-submit-button {

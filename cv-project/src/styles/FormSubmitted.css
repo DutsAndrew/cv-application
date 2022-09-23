@@ -6,6 +6,8 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  color: #CAB1BD;
+  font-weight: bolder;
 }
 
 #thank-you-message {

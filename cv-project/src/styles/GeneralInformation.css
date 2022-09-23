@@ -9,7 +9,7 @@
   width: 50vw;
   height: 75vh;
   margin: auto;
-  background-color: cyan;
+  background-color: #CFD8D7;
 }
 
 #general-header {
@@ -46,6 +46,8 @@
   margin-bottom: 5%;
   margin-top: 0.5%;
   font-size: 1.25em;
+  font-weight: bolder;
+  color: #CAB1BD;
 }
 
 #next-button {
@@ -53,4 +55,7 @@
   height: 4vh;
   font-size: 1.25em;
   margin-bottom: 3%;
+  background-color: #CAB1BD;
+  color: #9F9AA4;
+  font-weight: bolder;
 }

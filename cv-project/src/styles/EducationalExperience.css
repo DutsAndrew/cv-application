@@ -9,7 +9,7 @@
   width: 50vw;
   height: 75vh;
   margin: auto;
-  background-color: pink;
+  background-color: #E7CFCD;
 }
 
 #education-header {
@@ -46,6 +46,8 @@
   margin-bottom: 5%;
   margin-top: 0.5%;
   font-size: 1.25em;
+  font-weight: bolder;
+  color: #CAB1BD;
 }
 
 #start-studies-input, #end-studies-input {
@@ -54,13 +56,17 @@
   margin-bottom: 4%;
   margin-top: 0.5%;
   font-size: 1.25em;
-  opacity: .8;
+  font-weight: bolder;
+  color: #CAB1BD;
 }
 
 #previous-button {
   width: 25vw;
   height: 4vh;
   font-size: 1.25em;
+  font-weight: bolder;
+  background-color: #CAB1BD;
+  color: #9F9AA4;
 }
 
 #next-button {
@@ -68,4 +74,7 @@
   height: 4vh;
   font-size: 1.25em;
   margin-bottom: 3%;
+  background-color: #CAB1BD;
+  color: #9F9AA4;
+  font-weight: bolder;
 }
