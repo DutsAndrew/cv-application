@@ -25,7 +25,7 @@ class PracticalExperience extends Component {
           <input type='date' id="end-employment-input" className='practical-exp' placeholder={practicalExperience.endDate} onChange={handleChange} ></input>
         </form>
         <button id="previous-button" onClick={previousPage} >Previous Page</button>
-        <button id="next-button" type="submit" onClick={nextPage} >Submit Application</button>
+        <button id="next-button" type="submit" onClick={nextPage} >View Application</button>
       </div>
     );
   }

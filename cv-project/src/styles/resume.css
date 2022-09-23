@@ -6,27 +6,55 @@
   align-items: center;
   background-color: brown;
   color: white;
-  width: 60vw;
+  width: 100vw;
   height: 100vh;
+}
+
+#general-resume-container, #education-resume-container, #experience-resume-container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 60vw;
+}
+
+#general-resume-container {
+  margin-top: 2%;
+  height: 20vh;
+}
+
+#education-resume-container, #experience-resume-container {
+  height: 25vh;
 }
 
 #general-resume-header, #education-resume-header, #experience-resume-header {
   width: 60vw;
-  height: 10vh;
-  font-size: 3em;
+  height: 5vh;
+  margin: 0;
+  font-size: 2em;
 }
 
 .resume-item {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  width: 60vw;
+  height: auto;
   font-size: 1em;
   font-weight: bold;
+  margin: 0;
+  padding: 1.5%;
   color: yellow;
 }
 
-#previous-button {
+#button-resume-container {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: auto;
+  margin-bottom: 4%;
+  gap: 1%;
+}
+
+#previous-button, #final-submit-button {
   width: 25vw;
   height: 4vh;
+}
+
+#final-submit-button {
+  font-size: 1.25em;
 }
