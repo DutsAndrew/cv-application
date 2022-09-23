@@ -1,4 +1,4 @@
-import '../styles/educational-experience.css';
+import '../styles/EducationalExperience.css';
 import React, { Component } from 'react';
 
 class EducationalExperience extends Component {

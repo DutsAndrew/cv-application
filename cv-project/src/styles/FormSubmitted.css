@@ -1,0 +1,19 @@
+#thank-you-message-container {
+  width: 50vw;
+  height: 50vh;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#thank-you-message {
+  width: 50vw;
+  font-size: 2em;
+}
+
+#thank-you-message-pt-2 {
+  width: 50vw;
+  font-size: 1.5em;
+}

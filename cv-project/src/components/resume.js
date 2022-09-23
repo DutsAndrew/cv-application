@@ -1,4 +1,4 @@
-import '../styles/resume.css';
+import '../styles/Resume.css';
 import React, { Component } from 'react';
 
 class Resume extends Component {
@@ -7,7 +7,7 @@ class Resume extends Component {
   }
 
   render() {
-    const { generalInfo, educationalExperience, practicalExperience, previousPage } = this.props;
+    const { generalInfo, educationalExperience, practicalExperience, previousPage, nextPage } = this.props;
 
     return (
       <div id='resume'>
@@ -34,7 +34,7 @@ class Resume extends Component {
         </div>
         <div id='button-resume-container'>
           <button id="previous-button" onClick={previousPage}>Previous Page</button>
-          <button id='final-submit-button'>Submit Application</button>
+          <button id='final-submit-button' onClick={nextPage}>Submit Application</button>
         </div>
       </div>
     )

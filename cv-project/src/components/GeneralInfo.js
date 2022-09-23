@@ -1,4 +1,4 @@
-import '../styles/general-information.css';
+import '../styles/GeneralInformation.css';
 import React, { Component } from 'react';
 
 class GeneralInfo extends Component {

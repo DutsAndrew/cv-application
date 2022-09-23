@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './styles/App.css';
-import EducationalExperience from './components/educational-experience';
-import GeneralInfo from './components/general-info';
-import PracticalExperience from './components/practical-experience';
-import ProgressBar from './components/progress-bar';
-import Resume from './components/resume';
+import EducationalExperience from './components/EducationalExperience';
+import GeneralInfo from './components/GeneralInfo';
+import PracticalExperience from './components/PracticalExperience';
+import ProgressBar from './components/ProgressBar';
+import Resume from './components/Resume';
+import FormSubmitted from './components/FormSubmitted';
 
 class App extends Component {
   constructor() {
@@ -113,6 +114,13 @@ class App extends Component {
       })
       return;
     }
+
+    if (currentPage === 4) {
+      this.setState({
+        currentPage: 5,
+      });
+      return;
+    }
   }
 
   render() {
@@ -167,8 +175,15 @@ class App extends Component {
             educationalExperience={educationalExperience}
             practicalExperience={practicalExperience}
             previousPage={this.previousPage}
+            nextPage={this.nextPage}
           />
         </div>
+      )
+    }
+
+    if (currentPage === 5) {
+      return (
+        <FormSubmitted />
       )
     }
   }
