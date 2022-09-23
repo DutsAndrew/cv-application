@@ -6,8 +6,8 @@
   align-items: center;
   padding: 0.5%;
   gap: 0.75em;
-  width: 75vw;
-  height: 80vh;
+  width: 50vw;
+  height: 75vh;
   margin: auto;
   background-color: pink;
 }
@@ -17,7 +17,7 @@
   align-content: center;
   justify-content: center;
   align-items: center;
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 0;
   margin-top: 2%;
   margin-bottom: 2%;
@@ -30,13 +30,14 @@
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  width: 75vw;
-  height: 50vh;
+  width: 40vw;
+  height: 65vh;
 }
 
 .education-school, .education-degree, .education-start-studies, .education-end-studies {
   font-size: 1.5em;
   font-style: italic;
+  opacity: .7;
 }
 
 #degree-input, #school-input {
@@ -48,21 +49,22 @@
 }
 
 #start-studies-input, #end-studies-input {
-  width: 12vw;
-  height: 2.5vh;
-  margin-bottom: 5%;
+  width: 15vw;
+  height: 3vh;
+  margin-bottom: 4%;
   margin-top: 0.5%;
   font-size: 1.25em;
+  opacity: .8;
 }
 
 #previous-button {
-  width: 30vw;
+  width: 25vw;
   height: 4vh;
   font-size: 1.25em;
 }
 
 #next-button {
-  width: 30vw;
+  width: 25vw;
   height: 4vh;
   font-size: 1.25em;
 }

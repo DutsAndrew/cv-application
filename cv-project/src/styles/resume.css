@@ -10,7 +10,7 @@
   height: 100vh;
 }
 
-#general-header, #education-header, #experience-header {
+#general-resume-header, #education-resume-header, #experience-resume-header {
   width: 60vw;
   height: 10vh;
   font-size: 3em;
@@ -27,6 +27,6 @@
 }
 
 #previous-button {
-  width: 15vw;
+  width: 25vw;
   height: 4vh;
 }
