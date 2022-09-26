@@ -47,7 +47,7 @@
   margin-top: 0.5%;
   font-size: 1.25em;
   font-weight: bolder;
-  color: #CAB1BD;
+  color: black;
 }
 
 #start-studies-input, #end-studies-input {
@@ -57,8 +57,7 @@
   margin-top: 0.5%;
   font-size: 1.25em;
   font-weight: bolder;
-  color: #CAB1BD;
-}
+  color: black;}
 
 #previous-button {
   width: 25vw;
@@ -66,8 +65,7 @@
   font-size: 1.25em;
   font-weight: bolder;
   background-color: #CAB1BD;
-  color: #9F9AA4;
-}
+  color: black;}
 
 #next-button {
   width: 25vw;
@@ -75,6 +73,6 @@
   font-size: 1.25em;
   margin-bottom: 3%;
   background-color: #CAB1BD;
-  color: #9F9AA4;
+  color: black;  
   font-weight: bolder;
 }

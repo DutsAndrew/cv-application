@@ -5,7 +5,7 @@
   justify-content: flex-start;
   align-items: center;
   background-color: #E7CFCD;
-  color: #9F9AA4;
+  color: black;
   width: 100vw;
   height: 100vh;
 }
@@ -57,7 +57,7 @@
   font-size: 1.25em;
   font-weight: bolder;
   background-color: #CAB1BD;
-  color: #9F9AA4;
+  color: black;
 }
 
 #final-submit-button {
